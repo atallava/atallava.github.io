@@ -33,3 +33,48 @@
           <hr>
 
           The Grape Project: The goal of this ongoing project is to make a computer vision system that can automatically estimate the yield of a vineyard by visual inspection. Attach a camera to a tractor, drive it down each row of vines in a vineyard and the system should output an estimate for the weight of grapes growing on each vine. Solving this problem requires a means for registering images and an accurate method for detecting grape clusters on branches. Occlusions from leaves are a major challenge and we are investigating the use of active illumination and synthetic aperture methods to help with this problem. A video with some preliminary detection results is <a href = videos/grape_high.mp4>here</a> (high quality 25MB) and <a href = videos/grape_low.mp4>here</a> (compact 5MB).
+
+          <br>
+          <br>
+          Riverine Mapping: In the riverine mapping project we are building an autonomous quadrotor that can explore and map riverine environments. I have been developing vision algorithms to detect the extent of the river in images captured by an onboard camera. This information will be used to guide the quadrotor along the river and for mapping. Segmenting the river region in an image using a static appearance is difficult because river appearance varies greatly depending on lighting conditions, ripples on the water surface and reflections. We used knowledge of the position of the horizon in the image to provide context that allowed our algorithm to automatically update a river appearance model on the fly. More details can be found in our ICRA 2011 <a href = riverdetection_icra2011.pdf>paper</a>. An video of our system building a map of a kilometer long section of river can be found <a href = videos/river_mapping.mp4>here</a> (8MB). Videos of the river detector running on test sequences are <a href = videos/riverine1_high.avi>here</a> and <a href = videos/riverine2_high.avi>here</a> (high quality 25MB). More compact versions of the same videos are <a href = videos/riverine1_low.avi>here</a> and <a href = videos/riverine2_low.avi>here</a>(compact 7MB).
+
+          <br>
+          <br>
+          VertRep: We built a prototype pilot assistance device for helicopter pilots flying vertical replenishment missions between ships. Shipdecks heave and toss considerably on the high seas which makes flying low over them dangerous without a collision detection system. Traditional Radar based systems are confused by the slingloads the helicopters carry during these missions. A <a href = null> system</a> that uses a nodding Ladar and IMU for obstacle detection from a helicopter flying over static environments had been built in our lab, but it could not be used directly for the shiplanding scenario because deck motion caused severe warping of the Ladar scan pointclouds. We developed a visual tracking system that tracked the helipad markings and used them to determine shipdeck motion. The motion estimates were used to register the Ladar scans and unwarp the pointcloud resulting which gave an accurate 3D model of the shipdeck. A video showing our prototype in action on a mock shipdeck is available <a href = videos/vertrep_phaseI_high.mp4>here</a> (high quality 25MB) and <a href = videos/vertrep_phaseI_low.mp4>here</a> (compact 5MB). We are now waiting for a chance to develop our system further and deploy it on a real helicopter.
+
+          <hr>
+          -->
+
+      <h2>Selected Publications</h2>
+      <hr>
+      <ol>
+        <li>Supreeth Achar, Joseph Bartels, Red Whittaker, Kyros Kutulakos, Srinivasa Narasimhan. "Epipolar Time-of-Flight Imaging" <i>(to appear) SIGGRAPH 2017</i> <br><a href = Epitof_SIGGRAPH2017.pdf>pdf</a> <a href = Epitof_SIGGRAPH2017.bib>bibtex</a></li>
+        <li>Matthew O'Toole, Supreeth Achar, Srinivasa Narasimhan, Kyros Kutulakos. "Homogenous Codes for Energy Efficient Illumination and Imaging" <i>SIGGRAPH 2015</i>
+          <br><a href = Energy_SIGGRAPH2015.pdf>pdf</a> <a href = Energy_SIGGRAPH2015.bib>bibtex</a></li>
+        <li>Supreeth Achar, Srinivasa Narasimhan. "Multi Focus Structured Light for Recovering Scene Shape and Global Illumination" <i>ECCV 2014</i>
+          <br><a href = Achar_ECCV2014.pdf>pdf</a> <a href = Achar_ECCV2014.bib>bibtex</a></li>
+        <li>Supreeth Achar, Stephen Nuske, Srinivasa Narasimhan. "Compensating for Motion During Direct-Global Separation" <i>ICCV 2013</i>
+          <br><a href = Achar_ICCV2013.pdf>pdf</a> <a href = Achar_ICCV2013.bib>bibtex</a></li>
+        <li>Stephen Nuske, Supreeth Achar, Terry Bates, Srinivasa Narasimhan, Sanjiv Singh. "Yield Estimation in Vineyards by Visual Grape Detection" <i>IROS 2011</i>
+          <br><a href = grape_iros2011.pdf>pdf</a> <a>bibtex</a></li>
+        <li>Andrew Chambers, Supreeth Achar, Stephen Nuske, Joern Rehder, Bernd Kitt, Lyle Chamberlain, Justin Haines, Sebastian Scherer, Sanjiv Singh. "Perception for a River Mapping Robot" <i>IROS 2011</i>
+          <br><a href = riverine_iros2011.pdf>pdf</a> <a>bibtex</a></li>
+
+        <li>Supreeth Achar, Bharath Sankaran, Stephen Nuske, Sebastian Scherer, Sanjiv Singh. "Self Supervised Segmentation of River Scenes" <i>ICRA 2011</i>
+          <br><a href = riverdetection_icra2011.pdf>pdf</a> <a href = riverdetection_icra2011.bib>bibtex</a></li> 
+        <!--
+            <li>Aravindhan K. Krishnan, K. Madhava Krishna, Supreeth Achar. "Image Based Exploration for Indoor Environments Using Local Features" <i>AAMAS 2010</i>
+              <br><a href = exploration_AAMAS2010.pdf>pdf</a> <a href = exploration_AAMAS2010.bib>bibtex</a></li>
+        <li>A. H. Abdul Hafez, Supreeth Achar, C. V. Jawahar. "Visual Servoing Based on Gaussian Mixture Models" <i>ICRA 2008</i>
+          <br><a href = gmmServo_ICRA2008.pdf>pdf</a> <a href = gmmServo_ICRA2008.bib>bibtex</a> </li>
+        <li>D. Santosh, Supreeth Achar, C. V. Jawahar. "Autonomous image-based exploration for Mobile Robot Navigation" <i>ICRA 2008</i> 
+          <br><a href = imageBased_ICRA2008.pdf>pdf</a> <a href = imageBased_ICRA2008.bib>bibtex</a> </li>
+        <li>Shivudu Bhuvanagiri, K. Madhava Krishna, Supreeth Achar. "Coordination in Ambiguity: Coordinated Active Localization for Multiple Robots" <i>AAMAS Demos 2008</i> 
+          <br><a href = coordination_AAMAS2008.pdf>pdf</a> <a href = coordination_AAMAS2008.bib>bibtex</a> </li>
+        <li>Supreeth Achar, C. V. Jawahar. "Adaptation and Learning for Image Based Navigation" <i>ICVGIP 2008</i> 
+          <br><a>pdf</a> <a>bibtex</a> </li> 
+        -->
+      </ol>
+  </body>
+
+</html>
